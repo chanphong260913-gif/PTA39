@@ -134,7 +134,7 @@ border-radius: 30px;</string>
      <property name="styleSheet">
       <string notr="true">background:#EEF1FF;
 border-radius: 15px;
-border-bottom: 2px solid rgb(255, 0, 127);
+
 </string>
      </property>
      <property name="text">

@@ -49,7 +49,7 @@
 	color: #F54927;
 }
 
-#email, #password {
+#email, #password, #full_name {
 	background: #FCC6BB;
 	border: none;
 	outline: none;
@@ -111,10 +111,53 @@
           </font>
          </property>
          <property name="text">
-          <string>welcome back!</string>
+          <string>Create an accout</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Full name</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="full_name">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>PHONG</string>
          </property>
         </widget>
        </item>
@@ -219,7 +262,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Login</string>
+          <string>Register</string>
          </property>
         </widget>
        </item>
@@ -243,11 +286,11 @@
             <property name="font">
              <font>
               <family>Arial</family>
-              <pointsize>12</pointsize>
+              <pointsize>9</pointsize>
              </font>
             </property>
             <property name="text">
-             <string>need an accout?</string>
+             <string>Already have an accout?</string>
             </property>
            </widget>
           </item>
@@ -256,11 +299,11 @@
             <property name="font">
              <font>
               <family>Arial</family>
-              <pointsize>12</pointsize>
+              <pointsize>9</pointsize>
              </font>
             </property>
             <property name="text">
-             <string>Resinger here</string>
+             <string>Login here</string>
             </property>
            </widget>
           </item>
