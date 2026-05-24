@@ -41,7 +41,6 @@ class LoginPage(QMainWindow):
 
         # validate du lieu
         if self.__validate_input(email_input, password_input) is not None:
-            print(self.__validate_input(email_input, password_input))
             # co loi -> bao loi
             self.show_message(self.__validate_input(email_input, password_input))
             return  # khong lam gi nua
@@ -52,17 +51,15 @@ class LoginPage(QMainWindow):
     def goto_register(self):
         from pages.register import RegisterPage
 
-        self.register_page = RegisterPage(
+        register_page = RegisterPage(
             main_window=self.main_window, root_dir=self.root_dir
         )
-        self.close()  # ✅ đóng cửa sổ
 
     # ------------------- ham ho tro (private) ---------------------
     def __goto_home(self):
         from pages.home import HomePage
 
-        self.home_page = HomePage(main_window=self.main_window, root_dir=self.root_dir, cur_acc=account)
-        self.close()  # ✅ đóng cửa sổ
+        home_page = HomePage(main_window=self.main_window, root_dir=self.root_dir)
 
     def __validate_input(self, email, password):
         # kiem tra email
@@ -80,14 +77,15 @@ class LoginPage(QMainWindow):
 
         return None  # khong co loi
 
-    def show_message(self, message):
+    def show_message(self):
         # Khởi tạo hộp thoại thông báo
         msg = QMessageBox()
         msg.setWindowTitle("Thông báo")
-        msg.setText(message)
+        msg.setText("Đây là nội dung thông báo của bạn!")
         msg.setIcon(
             QMessageBox.Icon.Information
         )  # Các icon mặc định: Information, Warning, Critical, Question
         msg.setStandardButtons(QMessageBox.StandardButton.Ok)  # Nút bấm OK
+
         # Hiển thị hộp thoại
         msg.exec()

@@ -6,40 +6,38 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
+    <width>800</width>
     <height>600</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
-    <width>600</width>
+    <width>800</width>
     <height>600</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>600</width>
+    <width>800</width>
     <height>600</height>
    </size>
-  </property>
-  <property name="font">
-   <font>
-    <kerning>true</kerning>
-   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="animated">
-   <bool>true</bool>
-  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>600</height>
+    </size>
+   </property>
    <property name="styleSheet">
     <string notr="true">#centralwidget {
 	background: #FEEBE7;
@@ -49,7 +47,7 @@
 	color: #F54927;
 }
 
-#email, #password, #full_name {
+#email, #password {
 	background: #FCC6BB;
 	border: none;
 	outline: none;
@@ -76,29 +74,67 @@
 	border: none;
 	outline: none;	
 	text-align: left; 
+}
+
+#lable_7 {
+	background: blue;
 }</string>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QWidget" name="widget" native="true">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QLabel" name="title">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>60</height>
+          </size>
+         </property>
          <property name="font">
           <font>
-           <pointsize>18</pointsize>
+           <family>Arial Black</family>
+           <pointsize>16</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
          <property name="text">
-          <string>Create an accout</string>
+          <string>Welcome back!</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -106,50 +142,13 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_7">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Arial</family>
-          </font>
-         </property>
-         <property name="text">
-          <string>Full name</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="full_name">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PHONG</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QLabel" name="label_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -165,10 +164,11 @@
          <property name="font">
           <font>
            <family>Arial</family>
+           <pointsize>14</pointsize>
           </font>
          </property>
          <property name="text">
-          <string>Email</string>
+          <string>Email or phone number</string>
          </property>
         </widget>
        </item>
@@ -180,19 +180,16 @@
            <height>40</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>tungtungtungshaur@gmail.com</string>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>14</pointsize>
+          </font>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_5">
+        <widget class="QLabel" name="label_4">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -208,11 +205,11 @@
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>12</pointsize>
+           <pointsize>14</pointsize>
           </font>
          </property>
          <property name="text">
-          <string>password</string>
+          <string>Password</string>
          </property>
         </widget>
        </item>
@@ -224,14 +221,20 @@
            <height>40</height>
           </size>
          </property>
-         <property name="maximumSize">
+         <property name="baseSize">
           <size>
-           <width>16777215</width>
+           <width>0</width>
            <height>30</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
          <property name="text">
-          <string>23223324234333333333333333</string>
+          <string>4444444444444</string>
          </property>
          <property name="echoMode">
           <enum>QLineEdit::Password</enum>
@@ -239,45 +242,50 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="login">
+        <widget class="QPushButton" name="forgot_pass">
          <property name="font">
           <font>
            <family>Arial</family>
-           <pointsize>18</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <pointsize>12</pointsize>
           </font>
          </property>
          <property name="text">
-          <string>Register</string>
+          <string>Forgot you password?</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_3" native="true">
-         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,1">
+        <widget class="QPushButton" name="login">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial Black</family>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_4" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <widget class="QLabel" name="label_4">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>30</height>
-             </size>
-            </property>
+           <widget class="QLabel" name="label_6">
             <property name="font">
              <font>
               <family>Arial</family>
-              <pointsize>9</pointsize>
+              <pointsize>12</pointsize>
              </font>
             </property>
             <property name="text">
-             <string>Already have an accout?</string>
+             <string>Need an account?</string>
             </property>
            </widget>
           </item>
@@ -286,22 +294,15 @@
             <property name="font">
              <font>
               <family>Arial</family>
-              <pointsize>9</pointsize>
+              <pointsize>12</pointsize>
              </font>
             </property>
             <property name="text">
-             <string>Login here</string>
+             <string>Resinger here</string>
             </property>
            </widget>
           </item>
          </layout>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="forgot_pass">
-         <property name="text">
-          <string>fogot password?</string>
-         </property>
         </widget>
        </item>
       </layout>
@@ -309,43 +310,60 @@
     </item>
     <item>
      <widget class="QWidget" name="widget_2" native="true">
-      <widget class="QLabel" name="label_6">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>0</y>
-         <width>263</width>
-         <height>564</height>
-        </rect>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="contextMenuPolicy">
-        <enum>Qt::DefaultContextMenu</enum>
-       </property>
-       <property name="whatsThis">
-        <string/>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>../img/3766277.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>600</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>600</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../qr.svg</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>
